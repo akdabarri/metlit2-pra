@@ -52,6 +52,24 @@
             box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
             border-radius: 8px;
         }
+        table.matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 18px;
+            font-family: 'Inter', sans-serif;
+        }
+        table.matrix-table th, table.matrix-table td {
+            border: 1px solid #BDC3C7;
+            padding: 10px;
+            text-align: left;
+        }
+        table.matrix-table th {
+            background-color: #2C3E50;
+            color: white;
+        }
+        table.matrix-table tr:nth-child(even) {
+            background-color: #ECF0F1;
+        }
     </style>
 </head>
 <body>
@@ -285,11 +303,11 @@
                 <aside class="notes">Bekerjalah secara algoritmik dan transparan. Dokumentasikan alasan di setiap naskah yang dibuang.</aside>
             </section>
 
-            <!-- SESI 4: MINGGU 5 -->
+            <!-- SESI 4: MINGGU 5 (UPDATE KONSEP MATRIKS & NOTEBOOKLM) -->
             <section class="center-text">
                 <h1>MINGGU 5</h1>
                 <h3>The Autopsy (Data Extraction & Matrix)</h3>
-                <h4 style="color: #4A4A4A;">Mengubah Narasi Menjadi Fakta Kuantitatif</h4>
+                <h4 style="color: #4A4A4A;">Transformasi Narasi Jurnal Menjadi Fakta Kuantitatif</h4>
             </section>
 
             <section>
@@ -297,32 +315,64 @@
                 <div class="grid-2">
                     <div class="box" style="margin-top: 0; background-color: #ffebee; border-color: #E74C3C;">
                         <h4 style="color: #E74C3C; font-size: 24px;">[SALAH] Author-Centric (Katalog)</h4>
-                        <p style="font-size: 18px;">Budi (2023) meneliti AR di biologi. Hasilnya motivasi naik tapi lag. Alex (2024) membuat game 3D dengan skor SUS 85 tapi berat.</p>
-                        <p style="font-size: 16px; color: #7f8c8d;">(Membaca secara horizontal per jurnal. Sangat dilarang untuk jurnal Q1!)</p>
+                        <p style="font-size: 18px;">Budi (2023) meneliti AR di biologi. Hasilnya motivasi naik. Alex (2024) membuat game 3D dengan skor SUS 85 tapi berat.</p>
+                        <p style="font-size: 16px; color: #7f8c8d;">(Membaca menyamping per jurnal. Dilarang keras untuk jurnal Q1!)</p>
                     </div>
                     <div class="box" style="margin-top: 0; background-color: #e8f5e9; border-color: #27AE60;">
                         <h4 style="color: #27AE60; font-size: 24px;">[BENAR] Concept-Centric (Matriks)</h4>
                         <ul style="font-size: 18px;">
-                            <li><strong>Kolom Subjek:</strong> 60 SMP vs 30 SMK</li>
                             <li><strong>Kolom Intervensi:</strong> AR vs Game 3D</li>
-                            <li><strong>Kolom Limitasi:</strong> Keduanya terkendala Perangkat Keras</li>
+                            <li><strong>Kolom Hasil:</strong> Motivasi Naik vs Skor SUS 85</li>
+                            <li><strong>Kolom Limitasi:</strong> Kendala Perangkat Keras Hardware</li>
                         </ul>
-                        <p style="font-size: 16px; color: #7f8c8d;">(Membaca vertikal antar konsep. Sangat mudah untuk disintesis!)</p>
+                        <p style="font-size: 16px; color: #7f8c8d;">(Membaca vertikal antar konsep. Mudah untuk disintesis!)</p>
                     </div>
                 </div>
             </section>
 
             <section>
-                <h2>SOP Asisten Robotik (NotebookLM)</h2>
+                <h2>Format Wajib Google Sheets</h2>
+                <p style="font-size: 20px;">DILARANG menyalin paragraf utuh ke dalam sel. Ekstrak data mentahnya saja.</p>
+                <table class="matrix-table">
+                    <tr>
+                        <th>Kode/Penulis</th>
+                        <th>Subjek (P)</th>
+                        <th>Teknologi (I)</th>
+                        <th>Variabel (O)</th>
+                        <th>Hasil Angka</th>
+                        <th>Limitasi (Celah)</th>
+                    </tr>
+                    <tr>
+                        <td>Budi et al. (2024)</td>
+                        <td>60 Siswa SMK</td>
+                        <td>Game 3D (Unity)</td>
+                        <td>Usability & Motivasi</td>
+                        <td>SUS: 75. Motivasi naik 15%</td>
+                        <td>Pengujian terlalu singkat</td>
+                    </tr>
+                    <tr>
+                        <td>Alex (2023)</td>
+                        <td>120 Mhs S1</td>
+                        <td>Chatbot AI</td>
+                        <td>Nilai Kuis Post-test</td>
+                        <td>Selisih 8 Poin dari Kontrol</td>
+                        <td>AI sering berhalusinasi</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>SOP Asisten Robotik: NotebookLM</h2>
                 <div class="box">
-                    <p><strong>Aturan Penggunaan AI (Governance):</strong></p>
-                    <ul style="font-size: 24px;">
-                        <li>Gunakan <strong>NotebookLM</strong> (RAG murni). Unggah 15 sampai 25 PDF final kalian ke satu sumber yang sama.</li>
-                        <li><span class="accent-red">[HARAM]:</span> Ketik "Ringkaskan jurnal ini."</li>
-                        <li><span class="accent-green">[WAJIB]:</span> Ketik "Tolong ekstrak: 1. Jumlah sampel, 2. Algoritma, 3. Alat ukur, 4. Skor hasil, 5. Limitasi penelitian."</li>
-                    </ul>
+                    <p style="font-size: 22px;"><strong>The Master Vault & Jigsaw Execution:</strong></p>
+                    <ol style="font-size: 20px;">
+                        <li><strong>Ketua Kelompok</strong> membuat 1 Notebook dan unggah seluruh 15-25 PDF final. <strong>Bagikan (Share)</strong> ke anggota lain.</li>
+                        <li><strong>Isolasi Sumber:</strong> Saat membedah Jurnal A, HILANGKAN centang dari 24 jurnal lainnya. Hanya centang 1 PDF yang dikerjakan.</li>
+                        <li><span class="accent-red">DILARANG:</span> "Tolong ringkas jurnal ini."</li>
+                        <li><span class="accent-green">WAJIB (Salin Prompt Ini):</span> "Tolong ekstrak poin singkat: 1. Jumlah sampel, 2. Algoritma/Teknologi, 3. Alat Ukur, 4. Skor numerik hasil, 5. Kelemahan spesifik."</li>
+                    </ol>
                 </div>
-                <aside class="notes">NotebookLM dikunci pada PDF yang diunggah sehingga tidak akan berhalusinasi. Ajarkan mahasiswa menggunakannya sebagai alat ekstraksi, bukan penulis hantu.</aside>
+                <aside class="notes">Bekerja paralel. Mahasiswa A centang PDF 1, Mahasiswa B centang PDF 6 di laptop masing-masing. Kalian tidak akan bertabrakan.</aside>
             </section>
 
             <section>
@@ -335,61 +385,61 @@
                 <aside class="notes">Matriks Excel ini adalah nyawa SLR kalian. Jika isinya narasi bertele-tele, kalian akan hancur di Minggu 6.</aside>
             </section>
 
-            <!-- SESI 5: MINGGU 6 -->
+            <!-- SESI 5: MINGGU 6 (UPDATE INSIDE-OUT & MANCHESTER PHRASEBANK) -->
             <section class="center-text">
                 <h1>MINGGU 6</h1>
                 <h3>The Weaving (Inside-Out Phase 1)</h3>
-                <h4 style="color: #4A4A4A;">Sintesis Lintas-Studi untuk Bab 2 dan 3</h4>
+                <h4 style="color: #4A4A4A;">Menjahit Fakta Menjadi Sintesis Relasional</h4>
             </section>
 
             <section class="center-text">
-                <h2>Inside-Out Writing Strategy</h2>
-                <img src="inside.png" alt="Inside-Out Workflow" class="border-img" style="max-height: 400px;">
-                <p style="font-size: 22px; margin-top: 15px;">Orang awam menulis dari Bab 1 lalu stres. Ilmuwan menulis dari tengah (Berdasarkan Data dan Fakta).</p>
-                <p class="accent-red" style="font-size: 26px;">HARI INI DILARANG MENYENTUH BAB 1 (PENDAHULUAN)!</p>
-                <aside class="notes">Ini hukum besi penulisan jurnal Q1. Kita jahit Bab 2 dan 3 terlebih dahulu karena datanya sudah ada di Excel dari minggu sebelumnya.</aside>
+                <h2>Paradigma Inside-Out</h2>
+                <div class="box">
+                    <p style="font-size: 28px;">Ilmuwan menulis berdasarkan fakta yang sudah diekstrak.</p>
+                    <p class="accent-red" style="font-size: 24px; margin-top: 15px;">HARI INI DILARANG ADA YANG MENGETIK BAB 1 (PENDAHULUAN)!</p>
+                    <p style="font-size: 22px;">Kita akan merakit Bab 2 (Metode) dan Bab 3 (Hasil).</p>
+                </div>
             </section>
 
             <section>
-                <h2>Anatomi Bab 2 (Metodologi Teknis)</h2>
-                <div class="grid-2" style="font-size: 22px;">
+                <h2>Anatomi Bab 2 (Mekanis & Teknis)</h2>
+                <div class="grid-2" style="font-size: 20px;">
                     <div class="box" style="margin-top: 0;">
                         <h4 class="accent-blue">Paragraf 1: Search Strategy</h4>
-                        <p>Sebutkan basis data (Scopus, WoS) dan <em>Boolean Query</em> (AND/OR) secara presisi.</p>
+                        <p>Sebutkan basis data yang digunakan (Scopus, WoS) dan tuliskan <em>Boolean Query</em> (AND/OR) secara presisi matematis.</p>
                     </div>
                     <div class="box" style="margin-top: 0;">
                         <h4 class="accent-blue">Paragraf 2: Eligibility</h4>
-                        <p>Paparkan justifikasi Kriteria Inklusi dan Eksklusi secara logis dan ilmiah.</p>
+                        <p>Justifikasi kriteria Inklusi & Eksklusi. Mengapa dibatasi 5 tahun? Mengapa prosiding ditolak?</p>
                     </div>
                 </div>
-                <div class="box" style="margin-top: 15px; font-size: 22px;">
+                <div class="box" style="margin-top: 15px; font-size: 20px;">
                     <h4 class="accent-blue">Paragraf 3: Selection Process</h4>
-                    <p>Ceritakan alur penyusutan naskah dan panggil <strong>Diagram PRISMA 2020</strong> kalian di paragraf ini.</p>
+                    <p>Ceritakan angka penyusutan naskah. Letakkan <strong>Diagram Alir PRISMA 2020</strong> kalian tepat di bawah paragraf ini.</p>
                 </div>
             </section>
 
             <section>
-                <h2>Menjahit Bab 3 (Sintesis Relasional)</h2>
-                <p style="font-size: 24px;">Ubah Matriks Excel menjadi narasi menggunakan <em>Manchester Phrasebank</em>:</p>
-                <div class="box" style="font-size: 20px;">
+                <h2>Menjahit Bab 3: Cross-Study Analysis</h2>
+                <p style="font-size: 22px;">Baca Matriks Google Sheets kalian secara <strong>Vertikal</strong>, lalu jahit menggunakan <em>Manchester Phrasebank</em>:</p>
+                <div class="box" style="font-size: 22px;">
                     <ul>
-                        <li><strong>Untuk Persetujuan:</strong> <em>"Sejalan dengan temuan Budi (2022), mayoritas studi menunjukkan bahwa..."</em></li>
-                        <li><strong>Untuk Kontradiksi:</strong> <em>"Berbeda dengan studi X yang berfokus pada A, penelitian Y justru menemukan..."</em></li>
-                        <li><strong>Untuk Celah Riset:</strong> <em>"Meskipun literatur sepakat mengenai X, sangat sedikit yang membahas dampak..."</em></li>
+                        <li><span class="accent-green">Persetujuan:</span> <em>"Sejalan dengan temuan Budi (2022), mayoritas studi menunjukkan bahwa penerapan AI..."</em></li>
+                        <li><span class="accent-red">Kontradiksi:</span> <em>"Berbeda dengan studi X, penelitian Y justru menemukan adanya penurunan pada aspek..."</em></li>
+                        <li><span class="accent-blue">Celah (Limitation):</span> <em>"Meskipun literatur sepakat mengenai X, sangat sedikit yang membahas dampak..."</em> (Ambil dari kolom limitasi Excel).</li>
                     </ul>
                 </div>
-                <p style="font-size: 22px; color: #7f8c8d;">(Pastikan memasukkan gambar VOSviewer atau Biblioshiny sebagai pembuka Bab 3 sebelum membahas matriks)</p>
             </section>
 
             <section>
                 <h2>Sprint: The Weaving</h2>
                 <ol>
-                    <li>Buka Google Docs kelompok dan atur format menjadi APA 7th Edition.</li>
-                    <li>Mulai ketik <strong>Bab 2</strong> (3 paragraf teknis dan mekanis).</li>
-                    <li>Lanjut ketik <strong>Bab 3</strong> dengan menjahit argumen vertikal dari Excel.</li>
-                    <li><strong>Cek Kohesi:</strong> Gunakan NotebookLM HANYA untuk mengecek "Apakah paragraf 1 dan 2 saya ini saling menyambung?"</li>
+                    <li>Buka Google Docs kelompok. Atur margin dan font (APA 7th Edition).</li>
+                    <li>Selesaikan Bab 2 dalam 15 menit pertama.</li>
+                    <li>Letakkan visualisasi <strong>VOSviewer</strong> atau Biblioshiny sebagai pembuka Bab 3.</li>
+                    <li>Jahit narasi Bab 3 menggunakan frasa transisi akademik.</li>
+                    <li><strong>Validasi Kohesi:</strong> Gunakan NotebookLM hanya untuk bertanya, <em>"Apakah paragraf 1 dan 2 ini sudah logis dan saling menyambung?"</em></li>
                 </ol>
-                <aside class="notes">Dengan mengikuti alur ini, setengah badan jurnal sudah selesai tanpa perlu memikirkan kata pengantar.</aside>
             </section>
 
             <!-- SESI 6: MINGGU 7 -->
@@ -399,23 +449,35 @@
             </section>
 
             <section>
-                <h2>Menyelesaikan Puzzle</h2>
-                <p>Setelah tubuh naskah selesai (Bab 2 dan 3), lengkapi <strong>Kepala (Bab 1)</strong> dan <strong>Kaki (Bab 4)</strong>.</p>
-                <ul>
-                    <li><strong>Bab 1 (Pendahuluan):</strong> Paparkan Konteks Umum, Research Gap, dan Justifikasi Solusi dari korpus SLR.</li>
-                    <li><strong>Bab 4 (Kesimpulan):</strong> 1 Paragraf temuan esensial dan 1 Paragraf implikasi praktis.</li>
-                </ul>
-                <aside class="notes">Karena hasil Bab 3 sudah selesai, merumuskan Pendahuluan dan Kesimpulan akan jauh lebih terarah dan kohesif.</aside>
+                <h2>Menyelesaikan Kepala & Kaki</h2>
+                <p style="font-size: 24px;">Karena isi tubuh (Bab 3) sudah kalian kuasai, menulis Bab 1 dan 4 akan sangat mudah hari ini.</p>
+                <div class="grid-2">
+                    <div class="box" style="font-size: 20px; margin-top: 0;">
+                        <h4 class="accent-blue">Bab 1 (Pendahuluan)</h4>
+                        <ul>
+                            <li>Gunakan formula masalah umum (Konteks).</li>
+                            <li>Tunjukkan <em>Research Gap</em> (Kekurangan literatur saat ini).</li>
+                            <li>Tutup dengan rumusan pertanyaan riset (PICOC).</li>
+                        </ul>
+                    </div>
+                    <div class="box" style="font-size: 20px; margin-top: 0;">
+                        <h4 class="accent-blue">Bab 4 (Kesimpulan)</h4>
+                        <ul>
+                            <li>1 Paragraf menjawab RQ.</li>
+                            <li>1 Paragraf kelemahan studi (Limitation).</li>
+                            <li>1 Paragraf implikasi masa depan.</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <section class="center-text">
                 <h2>The Final Push</h2>
                 <div class="box">
                     <h3 class="accent-red">PENGUNCIAN TESIS (DATA FREEZE)</h3>
-                    <p>Tepat pada menit ke-140 hari ini, Folder G-Drive pengumpulan tugas akan <strong>DIKUNCI</strong>.</p>
-                    <p style="font-size: 24px;">File .docx yang terkumpul hari ini menjadi baseline evaluasi draf naskah. Selesaikan tata letak, pemeriksaan ketikan, dan format sitasi APA edisi ke-7 sekarang!</p>
+                    <p>Tepat pada menit ke-140 hari ini, folder pengumpulan tugas akan <strong>DIKUNCI MUTLAK</strong>.</p>
+                    <p style="font-size: 24px;">Pastikan tata letak, sitasi (Mendeley/Zotero), dan bahasa sudah dirapikan. File .docx inilah yang akan kalian uji menggunakan sistem SOPHIA pasca-UTS nanti!</p>
                 </div>
-                <aside class="notes">Setelah menit 140, akses unggah ditutup. Apapun hasilnya, itulah draf pertama yang akan diuji melalui sistem evaluasi.</aside>
             </section>
 
         </div>
