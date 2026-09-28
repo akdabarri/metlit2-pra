@@ -20,8 +20,8 @@
         .reveal p, .reveal li {
             font-family: 'Inter', sans-serif;
             color: #333333;
-            font-size: 30px;
-            line-height: 1.5;
+            font-size: 28px;
+            line-height: 1.4;
         }
         .reveal .center-text { text-align: center; }
         .accent-red { color: #E74C3C; font-weight: bold; }
@@ -32,8 +32,19 @@
             background-color: #F8F9FA;
             border-left: 8px solid #2C3E50;
             padding: 20px;
-            margin-top: 20px;
+            margin-top: 15px;
             border-radius: 4px;
+        }
+        .scroll-box {
+            background-color: #ECF0F1;
+            border: 2px dashed #7F8C8D;
+            padding: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+            font-family: 'Times New Roman', serif;
+            font-size: 22px;
+            line-height: 1.5;
+            color: #2C3E50;
         }
         .quiz-box {
             background-color: #FFF3E0;
@@ -45,7 +56,7 @@
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 20px;
         }
         img.border-img {
             border: 2px solid #2C3E50;
@@ -55,12 +66,13 @@
         table.matrix-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 18px;
+            font-size: 16px;
             font-family: 'Inter', sans-serif;
+            margin-top: 10px;
         }
         table.matrix-table th, table.matrix-table td {
             border: 1px solid #BDC3C7;
-            padding: 10px;
+            padding: 8px;
             text-align: left;
         }
         table.matrix-table th {
@@ -68,17 +80,9 @@
             color: white;
         }
         table.matrix-table tr:nth-child(even) {
-            background-color: #ECF0F1;
+            background-color: #F4F6F6;
         }
-        .code-box {
-            background-color: #2C3E50;
-            color: #ECF0F1;
-            padding: 15px;
-            border-radius: 5px;
-            font-family: monospace;
-            font-size: 20px;
-            line-height: 1.4;
-        }
+        .highlight-text { background-color: #FFF3E0; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -112,7 +116,6 @@
                     </ul>
                     <img src="qr.png" alt="QR Code" class="border-img" style="max-height: 350px;">
                 </div>
-                <aside class="notes">Sebelum kita berlari, isi survei ini dengan jujur. Ini pemetaan awal, krusial untuk strategi kelas kita.</aside>
             </section>
 
             <section>
@@ -128,9 +131,9 @@
                         </ul>
                     </div>
                     <div class="box" style="font-size: 24px; margin-top: 0;">
-                        <p><span class="accent-red">[Salah]:</span> Siswa, Mengajar, Nilai bagus.</p>
+                        <p><span class="accent-red">[SALAH]:</span> Siswa, Mengajar, Nilai bagus.</p>
                         <hr>
-                        <p><span class="accent-green">[Benar]:</span> Siswa SMK Kelas X (P), Media Game 3D (I) vs Ceramah (C), Peningkatan Skor Computational Thinking (O), di Purwakarta (C).</p>
+                        <p><span class="accent-green">[BENAR]:</span> Siswa SMK Kelas X (P), Media Game 3D (I) vs Ceramah (C), Peningkatan Skor Computational Thinking (O), di Purwakarta (C).</p>
                     </div>
                 </div>
             </section>
@@ -144,14 +147,13 @@
                         <p style="color: white; margin: 0;">Jawaban: <strong>Populasi (Siapa subjeknya?) dan Comparison (Dibandingkan dengan apa?)</strong></p>
                     </div>
                 </div>
-                <aside class="notes">Judul yang ngambang seperti ini pasti ditolak editor. Spesifikkan siapa siswa dan apa pembandingnya!</aside>
             </section>
 
             <section>
                 <h2>Sprint Kelompok <span class="accent-blue">(45 Menit)</span></h2>
                 <ol>
                     <li>Buka <strong>sinta.kemdikbud.go.id</strong> (Filter Sinta 4/5/6).</li>
-                    <li>Booking <strong>2 Target Jurnal</strong> (Plan A & Plan B).</li>
+                    <li>Booking <strong>2 Target Jurnal</strong> (Plan A dan Plan B).</li>
                     <li>Buat draf PICOC di Google Docs kelompok.</li>
                     <li><strong>Validasi Logbook:</strong> Panggil saya jika sudah siap!</li>
                 </ol>
@@ -160,7 +162,7 @@
             <!-- SESI 2: MINGGU 3 -->
             <section class="center-text">
                 <h1>MINGGU 3</h1>
-                <h3>Data Mining & Visualisasi Bibliometrik</h3>
+                <h3>Data Mining dan Visualisasi Bibliometrik</h3>
             </section>
 
             <section>
@@ -174,14 +176,13 @@
                     </ul>
                 </div>
                 <p style="font-size: 24px; background: #eee; padding: 10px; font-family: monospace;">("Artificial Intelligence" OR "Generative AI") AND "Programming"</p>
-                <aside class="notes">Mencari pakai Google biasa itu buang waktu. Cari pakai rumus ini di Scopus atau Publish or Perish, langsung dapat 150 paper emas.</aside>
             </section>
 
             <section>
                 <h2>Visualisasi (3 Klik Selesai)</h2>
                 <p>Ubah angka jadi visual riset standar:</p>
                 <ol>
-                    <li><strong>Export Data:</strong> Simpan hasil dari Scopus/PoP format <strong>.CSV</strong> & <strong>.RIS</strong></li>
+                    <li><strong>Export Data:</strong> Simpan hasil dari Scopus/PoP format <strong>.CSV</strong> dan <strong>.RIS</strong></li>
                     <li><strong>Biblioshiny (RStudio):</strong> Upload .CSV untuk membuat grafik tren.</li>
                     <li><strong>VOSviewer:</strong> Upload .RIS untuk membuat peta jaringan kata kunci.</li>
                 </ol>
@@ -204,7 +205,7 @@
                     <ol>
                         <li>Tarik 100+ paper mentah ke Mendeley.</li>
                         <li>Export file .csv dan .ris.</li>
-                        <li>Setorkan <strong>1 Gambar Biblioshiny</strong> & <strong>1 Peta VOSviewer</strong> ke dosen!</li>
+                        <li>Setorkan <strong>1 Gambar Biblioshiny</strong> dan <strong>1 Peta VOSviewer</strong> ke dosen!</li>
                     </ol>
                 </div>
             </section>
@@ -309,7 +310,6 @@
                     <li>Selesaikan pembagian zona penapisan hingga Fase 6.</li>
                     <li>Petakan penyusutan angka ke dalam <strong>Diagram PRISMA 2020</strong> di Word.</li>
                 </ol>
-                <aside class="notes">Bekerjalah secara algoritmik dan transparan. Dokumentasikan alasan di setiap naskah yang dibuang.</aside>
             </section>
 
             <!-- SESI 4: MINGGU 5 -->
@@ -396,13 +396,12 @@
             <section class="center-text">
                 <h1>MINGGU 6</h1>
                 <h3>The Weaving (Inside-Out Phase 1)</h3>
-                <h4 style="color: #4A4A4A;">Menjahit Fakta Menjadi Sintesis Relasional</h4>
+                <h4 style="color: #4A4A4A;">Merajut Fakta Menjadi Sintesis Relasional</h4>
             </section>
 
-            <!-- SLIDE APERSEPSI BARU DITAMBAHKAN DI SINI -->
             <section>
-                <h2>Apersepsi: Review Matriks "Standar Emas"</h2>
-                <p style="font-size: 20px;">Sebelum kita menjahit naskah, pastikan Excel kalian berstandar seperti ini dari M5 kemarin (Bukan Narasi!):</p>
+                <h2>Apersepsi: Matriks "Standar Emas" (M5)</h2>
+                <p style="font-size: 20px;">Sebelum merajut naskah, pastikan Excel kalian berstandar seperti ini (Penuh Fakta, Bukan Narasi Panjang):</p>
                 <table class="matrix-table" style="font-size: 15px;">
                     <tr>
                         <th>Penulis (Tahun)</th>
@@ -437,7 +436,6 @@
                         <td>Survei subjektif; Belum diuji empiris pada Mhs Informatika di Indonesia.</td>
                     </tr>
                 </table>
-                <aside class="notes">Ini adalah contoh hasil ekstraksi yang sangat tepat dari teman-teman kalian. Kolom limitasi di sebelah kanan ini adalah harta karun kalian untuk menyusun Bab 1 nanti.</aside>
             </section>
 
             <section class="center-text">
@@ -447,57 +445,124 @@
                     <p class="accent-red" style="font-size: 24px; margin-top: 15px;">HARI INI DILARANG ADA YANG MENGETIK BAB 1 (PENDAHULUAN)!</p>
                     <p style="font-size: 22px;">Kita akan merakit Bab 2 (Metode) dan Bab 3 (Hasil).</p>
                 </div>
-                <img src="inside.png" alt="Inside-Out Workflow" class="border-img" style="max-height: 300px; margin-top: 15px;">
+                <img src="inside.png" alt="Inside-Out Workflow" class="border-img" style="max-height: 250px; margin-top: 15px;">
             </section>
 
             <section>
                 <h2>SOP WAJIB: The Mendeley Rule</h2>
                 <div class="box" style="border-left-color: #E74C3C;">
-                    <h4 class="accent-red">ATURAN BESI PENULISAN:</h4>
-                    <p style="font-size: 22px;">Dilarang keras mengetik kurung dan nama sitasi secara manual. Tidak ada yang boleh mengetik "(Budi, 2024)" dari keyboard!</p>
+                    <h4 class="accent-red">ATURAN BESI SINTESIS:</h4>
+                    <p style="font-size: 22px;">Dilarang keras mengetik kurung dan nama sitasi secara manual. Tidak ada yang boleh mengetik tulisan "(Poulsen, 2025)" dari keyboard!</p>
                 </div>
-                <div style="font-size: 20px; text-align: left; margin-top: 20px;">
-                    <p><strong>Langkah Eksekusi:</strong></p>
+                <div style="font-size: 22px; text-align: left; margin-top: 15px;">
+                    <p><strong>Langkah Eksekusi Hari Ini:</strong></p>
                     <ol>
-                        <li>Pastikan plugin <strong>Mendeley Cite</strong> terpasang di Google Docs / Word.</li>
-                        <li>Pastikan ke-25 jurnal final sudah di-<em>import</em> ke pustaka Mendeley.</li>
-                        <li>Klik <strong>Insert Citation</strong> setiap akhir kalimat fakta.</li>
-                        <li>Di akhir kelas, klik <strong>Insert Bibliography</strong> untuk mencetak daftar pustaka ajaib (Format APA 7th).</li>
+                        <li>Diperbolehkan mencari sitasi tambahan (Google Scholar) HANYA untuk landasan teori pendukung (Misal: Definisi PRISMA oleh Page et al., 2021).</li>
+                        <li>Pastikan plugin <strong>Mendeley Cite / Zotero</strong> aktif di G-Docs/Word.</li>
+                        <li>Klik <strong>Insert Citation</strong> setiap ujung klaim fakta.</li>
+                        <li>Klik <strong>Insert Bibliography</strong> di akhir dokumen (Format APA 7th).</li>
                     </ol>
                 </div>
             </section>
 
             <section>
-                <h2>Anatomi Bab 2 (Mekanis & Teknis)</h2>
-                <div class="box" style="margin-top: 0; padding: 15px;">
-                    <p style="font-size: 18px; line-height: 1.4; text-align: justify; margin: 0;">
-                        <strong>[CONTOH PARAGRAF EMAS BAB 2]</strong><br>
-                        Tinjauan pustaka sistematis ini dilakukan mengikuti panduan pelaporan PRISMA 2020. Pencarian literatur dieksekusi melalui basis data Scopus dan Web of Science (WoS). Pencarian menggunakan operator Boolean ketat: <em>("Generative AI" OR "ChatGPT") AND "Higher Education"</em>. Penapisan artikel didasarkan pada kriteria inklusi, yakni jurnal penelitian primer berbahasa Inggris (2020-2026). Berdasarkan hasil penapisan awal, ditemukan 481 artikel. Setelah tahap penyusutan, 25 artikel final diekstraksi ke dalam matriks sintesis data.
-                    </p>
+                <h2>Draf Bab 2: Penapisan & Kriteria (Template)</h2>
+                <p style="font-size: 20px;">Ganti teks di dalam kurung siku <span class="highlight-text">[...]</span> dengan data riil kalian.</p>
+                <div class="scroll-box">
+                    <p><strong>2. Metodologi</strong><br>
+                    <strong>2.1. Protokol Pencarian dan Strategi Identifikasi</strong><br>
+                    Tinjauan literatur ini disusun dengan mematuhi pedoman pelaporan PRISMA 2020 (Page et al., 2021). Identifikasi literatur primer dieksekusi secara terstruktur pada September 2026 melalui basis data akademik terkemuka, yakni <strong>[Sebutkan Database, misal: Scopus dan Dimensions]</strong>. Pencarian diatur menggunakan kombinasi operator Boolean yang ketat, yaitu: <strong>["KATA KUNCI 1" AND ("KATA KUNCI 2" OR "SINONIM 2")]</strong>.</p>
+                    <p><strong>2.2. Kriteria Inklusi dan Eksklusi</strong><br>
+                    Guna menjaga relevansi dan validitas korpus data, peneliti menetapkan serangkaian kriteria kelayakan yang ketat pada Tabel 1.</p>
+                    <p style="text-align: center; font-weight: bold; font-size: 18px; margin-bottom: 5px;">Tabel 1. Kriteria Inklusi dan Eksklusi Pustaka</p>
+                    <table border="1" style="width: 100%; border-collapse: collapse; font-size: 16px; text-align: left;">
+                        <tr style="background-color: #E5E7E9;">
+                            <th style="padding: 5px;">Parameter</th>
+                            <th style="padding: 5px;">Kriteria Inklusi (Diterima)</th>
+                            <th style="padding: 5px;">Kriteria Eksklusi (Ditolak)</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px;">Rentang Tahun</td>
+                            <td style="padding: 5px;">[Tahun Awal] hingga [Tahun Akhir]</td>
+                            <td style="padding: 5px;">Dipublikasikan sebelum tahun [Tahun Awal]</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px;">Jenis Dokumen</td>
+                            <td style="padding: 5px;">Artikel Jurnal Primer / Empiris</td>
+                            <td style="padding: 5px;">Review Paper, Buku, Prosiding, Opini</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px;">Populasi/Konteks</td>
+                            <td style="padding: 5px;">[Sebutkan target P kalian, misal: Vokasi/SMK]</td>
+                            <td style="padding: 5px;">Selain [Sebutkan P] (misal: Subjek medis/SD)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px;">Akses & Bahasa</td>
+                            <td style="padding: 5px;">Berbahasa Inggris & Full-Text Tersedia</td>
+                            <td style="padding: 5px;">Bahasa non-Inggris & Terhalang Paywall</td>
+                        </tr>
+                    </table>
                 </div>
             </section>
 
             <section>
-                <h2>Menjahit Bab 3: Cross-Study Analysis</h2>
-                <p style="font-size: 22px;">Baca Matriks Google Sheets kalian secara <strong>Vertikal</strong>, lalu jahit menggunakan <em>Manchester Phrasebank</em>:</p>
-                <div class="box" style="font-size: 20px; padding: 15px;">
-                    <p style="font-size: 18px; line-height: 1.4; text-align: justify; margin: 0;">
-                        <strong>[CONTOH PARAGRAF EMAS BAB 3]</strong><br>
-                        Mayoritas literatur sepakat bahwa penggunaan Generative AI memberikan peningkatan pada skor mahasiswa <strong>(Oh & Park, 2026; Poulsen et al., 2025)</strong>. Sebagai contoh, Usmeldi et al. <strong>(2026)</strong> menemukan peningkatan skor Berpikir Kritis. <strong>Namun demikian</strong>, peningkatan performa ini membawa risiko. Sejalan dengan temuan Celik <strong>(2025)</strong>, studi eksperimental oleh Hariyanto et al. <strong>(2025)</strong> menggarisbawahi tingginya insiden <em>information overload</em> yang memicu kebingungan jika AI digunakan tanpa perancah pedagogis.
-                    </p>
+                <h2>Draf Bab 2: Ekstraksi Data (Template)</h2>
+                <div class="scroll-box">
+                    <p><strong>2.3. Ekstraksi Data dan Pemilihan Studi</strong><br>
+                    Pencarian awal pada basis data menghasilkan total <strong>[Angka Total Awal]</strong> dokumen. Melalui proses penyusutan dan deduplikasi berbantuan perangkat lunak manajemen referensi, sebanyak <strong>[Angka Duplikat]</strong> artikel ganda dihapus. Penapisan lapis pertama berbasis analisis judul dan abstrak mengeksklusi <strong>[Angka Dibuang]</strong> naskah karena melenceng dari konteks penelitian (out of scope).</p>
+                    <p>Pada tahap akhir, sisa <strong>[Angka Sisa Lapis Kedua]</strong> naskah utuh dievaluasi kelayakannya secara independen berdasarkan kriteria kelayakan. Secara kumulatif, tinjauan sistematis ini mempertahankan <strong>[Angka Korpus Final, misal: 25]</strong> artikel jurnal utama yang diekstraksi ke dalam matriks sintesis data. Pemetaan penyusutan aliran naskah divisualisasikan pada Gambar 1.</p>
+                    <div style="border: 2px dashed #95A5A6; padding: 20px; text-align: center; margin-top: 15px; background-color: #F8F9FA;">
+                        <p style="color: #7F8C8D; font-weight: bold; margin:0;">[INSERT: GAMBAR DIAGRAM PRISMA 2020 DI SINI]</p>
+                        <p style="font-size: 16px; margin:0;">Gambar 1. Diagram Alir Pemilihan Studi (PRISMA 2020)</p>
+                    </div>
                 </div>
             </section>
 
             <section>
-                <h2>Sprint: The Weaving</h2>
-                <ol>
-                    <li>Buka Google Docs kelompok. Atur margin dan font (APA 7th Edition).</li>
-                    <li>Selesaikan Bab 2 dalam 15 menit pertama.</li>
-                    <li>Letakkan visualisasi <strong>VOSviewer</strong> sebagai pembuka Bab 3.</li>
-                    <li>Jahit narasi Bab 3 menggunakan frasa transisi akademik.</li>
-                    <li><span class="accent-red">Gunakan Mendeley Cite untuk setiap klaim!</span></li>
-                    <li><strong>Validasi Kohesi:</strong> Gunakan Gemini Notebook hanya untuk bertanya, <em>"Apakah paragraf 1 dan 2 ini sudah logis?"</em></li>
-                </ol>
+                <h2>Z-Weaving: Formula Menjahit Bab 3</h2>
+                <div class="box">
+                    <p style="font-size: 22px;"><strong>Jangan membaca baris per baris. Bacalah tabel Excel per kolom!</strong><br>Lalu jahit dengan urutan berikut:</p>
+                    <ol style="font-size: 20px;">
+                        <li><span class="accent-green">Klaim Mayoritas (Persetujuan):</span> "Sebagian besar jurnal [Sitasi 1, 2, 3] setuju bahwa teknologi X..."</li>
+                        <li><span class="accent-red">Anomali / Kontradiksi (Kondisi Khusus):</span> "Namun demikian, efek positif ini rupanya memicu [Masalah/Limitasi] apabila [Sitasi 4, 5]..."</li>
+                        <li><span class="accent-blue">Simpulan Sintesis:</span> "Hal ini mengindikasikan bahwa intervensi X memerlukan pengawasan terhadap Y..."</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section>
+                <h2>Draf Bab 3: Bibliometrik & Hasil (Template)</h2>
+                <div class="scroll-box">
+                    <p><strong>3. Hasil dan Pembahasan</strong><br>
+                    <strong>3.1. Pemetaan Bibliometrik dan Tren Literatur</strong><br>
+                    Evaluasi bibliometrik terhadap <strong>[Angka Final]</strong> literatur utama mengungkap dinamika publikasi terkait <strong>[Topik Utama Kalian]</strong>. Sebagaimana divisualisasikan pada Gambar 2, kluster penelitian didominasi oleh kata kunci <strong>[Sebutkan Kata Kunci Terbesar]</strong> dan <strong>[Kata Kunci Kedua]</strong>. Analisis tren menunjukkan lonjakan minat akademik pada isu ini di tahun <strong>[Tahun Puncak]</strong>.</p>
+                    
+                    <div style="border: 2px dashed #95A5A6; padding: 20px; text-align: center; margin-top: 15px; margin-bottom: 15px; background-color: #F8F9FA;">
+                        <p style="color: #7F8C8D; font-weight: bold; margin:0;">[INSERT: GAMBAR VOSVIEWER / BIBLIOSHINY DI SINI]</p>
+                        <p style="font-size: 16px; margin:0;">Gambar 2. Peta Jaringan Kluster Kata Kunci Literatur</p>
+                    </div>
+
+                    <p><strong>3.2. Karakteristik Demografi dan Intervensi Teknologi</strong><br>
+                    *(Sintesis Kolom Populasi dan Teknologi dari Excel)*<br>
+                    Analisis terhadap subjek eksperimen dari literatur yang ditinjau menunjukkan kecenderungan yang kuat. Mayoritas studi (sebesar <strong>[X]%</strong>) mengimplementasikan intervensi pada demografi <strong>[Sebutkan Mayoritas Subjek, misal: mahasiswa S1]</strong> <strong>(Sitasi A; Sitasi B)</strong>. Secara teknis, dominasi intervensi bertumpu pada platform <strong>[Teknologi Dominan]</strong>, sementara adopsi <strong>[Teknologi Minoritas]</strong> masih bersifat eksploratif <strong>(Sitasi C)</strong>.</p>
+                    
+                    <p><strong>3.3. Evaluasi Dampak terhadap Kinerja (Outcome)</strong><br>
+                    *(Sintesis Kolom Hasil Angka dan Limitasi menggunakan pola Z-Weaving)*<br>
+                    Tinjauan literatur secara konsisten membuktikan bahwa intervensi <strong>[Teknologi Kalian]</strong> memberikan determinasi positif terhadap <strong>[Variabel Kalian]</strong>. Sejalan dengan temuan <strong>(Sitasi D)</strong>, kelompok eksperimen mencatat lonjakan skor signifikan dibandingkan metode konvensional. Penyelidikan paralel oleh <strong>(Sitasi E)</strong> memvalidasi tren ini dengan akurasi mencapai <strong>[Angka]</strong>.<br><br>
+                    <strong>Namun demikian</strong>, peningkatan efikasi ini rupanya bukan tanpa syarat. Berbeda dengan klaim keberhasilan sebelumnya, temuan <strong>(Sitasi F)</strong> secara kontras menegaskan bahwa korelasi positif tersebut gagal direplikasi secara stabil apabila <strong>[Sebutkan Syarat dari Limitasi Excel, misal: beban kognitif tidak diukur]</strong>. Matriks sintesis ini mengekspos celah bahwa tanpa perancah pedagogis yang matang, intervensi <strong>[Teknologi]</strong> rawan memicu <strong>[Sebutkan Dampak Buruk dari Limitasi Excel] (Sitasi G)</strong>.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Sprint Eksekusi (45 Menit)</h2>
+                <div class="box">
+                    <ol style="font-size: 24px;">
+                        <li>Buka Google Docs kelompok. Atur format margin dan font sesuai standar APA 7th Edition.</li>
+                        <li><strong>15 Menit Pertama:</strong> Selesaikan Bab 2. Tempel Gambar Diagram PRISMA.</li>
+                        <li><strong>30 Menit Berikutnya:</strong> Tempel visualisasi VOSviewer, lalu jahit matriks Excel kalian menggunakan rumusan <em>Z-Weaving</em> ke dalam Bab 3.</li>
+                        <li class="accent-red">Dosen akan berkeliling memeriksa kohesi paragraf dan ketepatan penggunaan plugin Mendeley.</li>
+                    </ol>
+                </div>
             </section>
 
             <!-- SESI 6: MINGGU 7 -->
@@ -507,7 +572,7 @@
             </section>
 
             <section>
-                <h2>Menyelesaikan Kepala & Kaki</h2>
+                <h2>Menyelesaikan Kepala dan Kaki</h2>
                 <p style="font-size: 24px;">Karena isi tubuh (Bab 3) sudah kalian kuasai, menulis Bab 1 dan 4 akan sangat mudah hari ini.</p>
                 <div class="grid-2">
                     <div class="box" style="font-size: 20px; margin-top: 0;">
@@ -534,7 +599,7 @@
                 <div class="box">
                     <h3 class="accent-red">PENGUNCIAN TESIS (DATA FREEZE)</h3>
                     <p>Tepat pada menit ke-140 hari ini, folder pengumpulan tugas akan <strong>DIKUNCI MUTLAK</strong>.</p>
-                    <p style="font-size: 24px;">Pastikan tata letak, sitasi (Mendeley/Zotero), dan bahasa sudah dirapikan. File .docx inilah yang akan kalian uji menggunakan sistem SOPHIA pasca-UTS nanti!</p>
+                    <p style="font-size: 24px;">Pastikan tata letak, sitasi (Mendeley/Zotero), dan bahasa sudah dirapikan. File .docx inilah yang akan kalian uji menggunakan sistem evaluasi pasca-UTS nanti!</p>
                 </div>
             </section>
 
