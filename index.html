@@ -83,6 +83,12 @@
             background-color: #F4F6F6;
         }
         .highlight-text { background-color: #FFF3E0; font-weight: bold; }
+        
+        /* Custom scrollbar for better visibility */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb { background: #BDC3C7; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #7F8C8D; }
     </style>
 </head>
 <body>
@@ -581,19 +587,21 @@
 
             <section>
                 <h2>Kerangka Bab 1: Piramida Terbalik</h2>
-                <div class="grid-2">
-                    <div style="font-size: 20px;">
-                        <ul style="list-style-type: decimal;">
-                            <li><strong>Konteks Makro:</strong> Latar belakang global, urgensi isu, & rujukan pakar internasional.</li>
-                            <li><strong>Signifikansi Teoritis:</strong> Perdebatan pakar tentang solusi masalah (Si A bilang X, Si B bilang Y).</li>
-                            <li><strong>Konteks Spesifik (Lokal):</strong> Kaitkan isu global dengan masalah lokal/jurusan kita.</li>
-                            <li><strong>Research Gap:</strong> Serang secara eksplisit celah yang *belum* diteliti orang.</li>
-                            <li><strong>Tujuan & PICOC:</strong> Pernyataan riset untuk menutup celah tersebut.</li>
-                        </ul>
-                    </div>
-                    <div class="box" style="margin-top: 0; padding: 15px;">
-                        <h4 class="accent-red" style="font-size: 20px;">[LARANGAN KERAS]</h4>
-                        <p style="font-size: 18px;">Dilarang membuka Bab 1 dengan definisi buku teks yang membosankan (misal: "Pendidikan adalah usaha sadar..."). Jurnal internasional menuntut signifikansi masalah, bukan kamus!</p>
+                <div style="max-height: 400px; overflow-y: auto; padding-right: 15px;">
+                    <div class="grid-2">
+                        <div style="font-size: 20px;">
+                            <ul style="list-style-type: decimal; padding-left: 20px;">
+                                <li><strong>Konteks Makro:</strong> Latar belakang global, urgensi isu, & rujukan pakar internasional.</li>
+                                <li><strong>Signifikansi Teoritis:</strong> Perdebatan pakar tentang solusi masalah (Si A bilang X, Si B bilang Y).</li>
+                                <li><strong>Konteks Spesifik (Lokal):</strong> Kaitkan isu global dengan masalah lokal/jurusan kita.</li>
+                                <li><strong>Research Gap:</strong> Serang secara eksplisit celah yang belum diteliti orang.</li>
+                                <li><strong>Tujuan & PICOC:</strong> Pernyataan riset untuk menutup celah tersebut.</li>
+                            </ul>
+                        </div>
+                        <div class="box" style="margin-top: 0; padding: 15px;">
+                            <h4 class="accent-red" style="font-size: 20px;">[LARANGAN KERAS]</h4>
+                            <p style="font-size: 18px;">Dilarang membuka Bab 1 dengan definisi buku teks yang membosankan (misal: "Pendidikan adalah usaha sadar..."). Jurnal internasional menuntut signifikansi masalah, bukan kamus!</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -639,8 +647,8 @@
                     <ol style="font-size: 24px;">
                         <li>Lengkapi <strong>Bab 1</strong> dan <strong>Bab 4</strong> menggunakan templat yang tersedia.</li>
                         <li>Pastikan semua sitasi terhubung dengan Mendeley (tidak ada ketik manual).</li>
-                        <li>Pastikan tata letak, margin, dan *font* sudah rapi.</li>
-                        <li>Unggah dokumen .docx kalian ke *folder* Google Drive tugas. Ini adalah Draf V1 kalian.</li>
+                        <li>Pastikan tata letak, margin, dan font sudah rapi.</li>
+                        <li>Unggah dokumen .docx kalian ke folder Google Drive tugas. Ini adalah Draf V1 kalian.</li>
                     </ol>
                 </div>
             </section>
@@ -651,15 +659,14 @@
                 <div class="box" style="border-left-color: #2980B9;">
                     <p style="font-size: 24px; text-align: justify;">Pernahkah kalian merasa bingung dan lelah saat harus merevisi naskah berkali-kali tanpa arah yang jelas?</p>
                     <p style="font-size: 24px; text-align: justify;">Mulai minggu depan (Pertemuan 8), kelas kita akan berfokus penuh pada materi Statistika Terapan. Namun, draf jurnal SLR kalian tetap harus disempurnakan. Untuk itu, saya memperkenalkan <strong>SOPHIA</strong>: Asisten Evaluasi Naskah Mandiri kalian.</p>
-                    <p style="font-size: 24px; text-align: justify;">Akses di sini. sophia-ai.web.id</p>
-                    <p class="accent-blue" style="font-size: 22px; text-align: left; margin-top: 15px;">SOPHIA akan membantu mengevaluasi dan memberikan saran revisi draf kalian secara asinkron dari rumah, sementara di kelas kita akan fokus belajar menghitung probabilitas.</p>
+                    <p class="accent-blue" style="font-size: 22px; text-align: left; margin-top: 15px;">SOPHIA akan membantu mengevaluasi dan memberikan saran revisi draf kalian secara asinkron dari rumah. Kalian dapat mengaksesnya melalui tautan: <a href="https://sophia-ai.web.id" target="_blank" style="color: #E74C3C; text-decoration: underline;">sophia-ai.web.id</a>.</p>
                 </div>
             </section>
 
             <!-- SLIDE PENGAMBILAN DATA (NASA-TLX) -->
             <section class="center-text">
                 <h2>Evaluasi Beban Kerja Manual</h2>
-                <div class="box">
+                <div class="box" style="max-height: 400px; overflow-y: auto; padding-right: 15px;">
                     <p style="font-size: 22px;">Sebelum kita menggunakan SOPHIA minggu depan, mari kita ukur seberapa berat beban menulis draf V1 secara manual hari ini.</p>
                     <p style="font-size: 18px; color: #7F8C8D;">(Evaluasi ini digunakan untuk riset dan pengembangan. Tidak memengaruhi nilai akhir kelas. Mohon isi dengan jujur).</p>
                     <img src="qr2.png" alt="QR Code NASA-TLX" class="border-img" style="max-height: 250px; margin-top: 15px;">
